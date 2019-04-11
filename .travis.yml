@@ -2,7 +2,9 @@ language: java
 jdk: openjdk12
 install: true
 script:
-  - ./mvnw clean test
+  #- ./mvnw clean test
+  # mvn install is required to install stub locally in .m2 for stub runner tests
+  - ./mvnw clean install
 cache:
   packages: true
   directories:

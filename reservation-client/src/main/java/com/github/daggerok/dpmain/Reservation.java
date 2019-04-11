@@ -12,5 +12,5 @@ public class Reservation {
   private String id;
 
   @NonNull
-  private String reservationName;
+  private String name;
 }

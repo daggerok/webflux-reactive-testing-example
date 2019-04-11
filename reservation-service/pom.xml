@@ -53,6 +53,8 @@
   </profiles>
 
   <build>
+    <defaultGoal>clean install</defaultGoal>
+
     <plugins>
       <plugin>
         <groupId>org.springframework.cloud</groupId>
