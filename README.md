@@ -1,4 +1,4 @@
-# Reactive TDD with spring-boot
+# Reactive TDD with spring-boot [![Build Status](https://travis-ci.org/daggerok/webflux-reactive-testing-example.svg?branch=master)](https://travis-ci.org/daggerok/webflux-reactive-testing-example)
 See `reservation-service/src/test/java/com/github/daggerok` tests
 
 _run tests_
