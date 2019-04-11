@@ -1,0 +1,9 @@
+language: java
+jdk: openjdk12
+install: true
+script:
+  - ./mvnw clean test
+cache:
+  packages: true
+  directories:
+    - ~/.m2
