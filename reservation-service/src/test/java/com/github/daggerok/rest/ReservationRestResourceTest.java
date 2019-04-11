@@ -28,7 +28,7 @@ public class ReservationRestResourceTest {
   @Test
   public void test() {
     Mockito.when(repository.findAll())
-           .thenReturn(Flux.just(new Reservation("4", "Max")));
+           .thenReturn(Flux.just(Reservation.allOf("4", "Max")));
 
     webTestClient.get().uri("/v1/reservations")
                  .exchange()

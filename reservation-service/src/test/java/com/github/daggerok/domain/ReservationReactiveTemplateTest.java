@@ -17,7 +17,7 @@ public class ReservationReactiveTemplateTest {
 
   @Test
   public void test() {
-    Reservation reservation = new Reservation("2", "Max");
+    Reservation reservation = Reservation.allOf("2", "Max");
 
     StepVerifier.create(template.save(reservation))
                 .expectNextMatches(r -> r.getId().equals("2") && r.getName().equals("Max"))

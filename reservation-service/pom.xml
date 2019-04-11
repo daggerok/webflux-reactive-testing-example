@@ -52,4 +52,19 @@
     </profile>
   </profiles>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-contract-maven-plugin</artifactId>
+        <version>${spring-cloud-contract-maven-plugin.version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <baseClassForTests>com.github.daggerok.contract.BaseClass</baseClassForTests>
+          <testMode>EXPLICIT</testMode><!-- avoid MockMvc error on reactive... -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
