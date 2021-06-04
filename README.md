@@ -1,4 +1,13 @@
-# Reactive TDD with spring-boot [![Build Status](https://travis-ci.org/daggerok/webflux-reactive-testing-example.svg?branch=master)](https://travis-ci.org/daggerok/webflux-reactive-testing-example)
+# Reactive TDD with spring-boot [![CI](https://github.com/daggerok/webflux-reactive-testing-example/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/daggerok/webflux-reactive-testing-example/actions/workflows/ci.yaml)
+
+## Dev
+
+```bash
+./mvnw clean install -f reservation-service ; ./mvnw clean test
+```
+
+## Docs
+
 See `reservation-service/src/test/java/com/github/daggerok` tests
 
 Follow guide from git commits...

@@ -5,9 +5,9 @@
 
   <parent>
     <groupId>com.github.daggerok</groupId>
-    <artifactId>parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <relativePath>../parent/pom.xml</relativePath>
+    <artifactId>common-parent</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+    <relativePath>../common-parent/pom.xml</relativePath>
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
