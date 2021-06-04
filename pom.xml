@@ -26,7 +26,7 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
     <spring-cloud.version>2020.0.3</spring-cloud.version>
-    <spring-cloud-contract-maven-plugin.version>2.2.7.RELEASE</spring-cloud-contract-maven-plugin.version>
+    <spring-cloud-contract-maven-plugin.version>3.0.0</spring-cloud-contract-maven-plugin.version>
   </properties>
 
   <modules>
