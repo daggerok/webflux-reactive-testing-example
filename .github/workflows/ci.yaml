@@ -68,4 +68,6 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
       - run: ./mvnw -B dependency:resolve dependency:resolve-plugins
+      - run: ./mvnw versions:display-parent-updates
+      - run: ./mvnw versions:display-plugin-updates
       - run: ./mvnw versions:display-property-updates
