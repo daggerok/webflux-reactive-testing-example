@@ -25,7 +25,7 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
-    <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+    <spring-cloud.version>2020.0.3</spring-cloud.version>
     <spring-cloud-contract-maven-plugin.version>2.1.1.RELEASE</spring-cloud-contract-maven-plugin.version>
   </properties>
 
