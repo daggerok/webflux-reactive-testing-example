@@ -33,7 +33,7 @@ public class ReservationRestResourceTest {
     webTestClient.get().uri("/v1/reservations")
                  .exchange()
                  .expectStatus().isOk()
-                 .expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)
+                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
                  .expectBody().jsonPath("@.[0].name").isEqualTo("Max");
   }
 }

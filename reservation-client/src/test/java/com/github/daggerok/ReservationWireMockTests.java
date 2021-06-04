@@ -17,7 +17,7 @@ import reactor.test.StepVerifier;
 import java.util.List;
 
 import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
-import static org.springframework.http.MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE;
+import static org.springframework.http.MediaType.APPLICATION_PROBLEM_JSON_VALUE;
 
 @AutoConfigureJsonTesters
 @RunWith(SpringRunner.class)
@@ -38,8 +38,9 @@ public class ReservationWireMockTests {
     WireMock.stubFor(
         WireMock.get("/v1/reservations")
                 .willReturn(WireMock.aResponse()
-                                    .withHeader(CONTENT_TYPE, APPLICATION_PROBLEM_JSON_UTF8_VALUE)
-                                    .withBody(json)));
+                                    .withHeader(CONTENT_TYPE, APPLICATION_PROBLEM_JSON_VALUE)
+                                    .withBody(json))
+    );
   }
 
   @Test

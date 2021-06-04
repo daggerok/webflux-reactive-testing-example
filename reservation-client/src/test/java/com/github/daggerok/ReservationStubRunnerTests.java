@@ -20,11 +20,11 @@ import java.util.List;
 
 import static org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties.StubsMode.LOCAL;
 import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
-import static org.springframework.http.MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE;
+import static org.springframework.http.MediaType.APPLICATION_PROBLEM_JSON_VALUE;
 
 @RunWith(SpringRunner.class)
 @Import({ ReactiveReservationClient.class, ReservationClientApplication.class })
-@AutoConfigureStubRunner(ids = "com.github.daggerok:reservation-service:+:8080", stubsMode = LOCAL)
+@AutoConfigureStubRunner(ids = "com.github.daggerok:reservation-service:1.0.1-SNAPSHOT:8080", stubsMode = LOCAL)
 public class ReservationStubRunnerTests {
 
   @Autowired

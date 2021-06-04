@@ -12,7 +12,7 @@ Contract.make {
   response {
     status(200)
     headers {
-      contentType(applicationJsonUtf8())
+      contentType(applicationJson())
     }
     body("""
       [
