@@ -1,4 +1,4 @@
-# Reactive TDD with spring-boot [![CI](https://github.com/daggerok/webflux-reactive-testing-example/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/daggerok/webflux-reactive-testing-example/actions/workflows/ci.yaml)
+# Reactive TDD with spring-boot [![CI](https://github.com/daggerok/webflux-reactive-testing-example/actions/workflows/ci.yaml/badge.svg)](https://github.com/daggerok/webflux-reactive-testing-example/actions/workflows/ci.yaml)
 
 ## Dev
 
