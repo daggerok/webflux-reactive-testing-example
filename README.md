@@ -3,7 +3,7 @@
 ## Dev
 
 ```bash
-./mvnw clean install -f reservation-service ; ./mvnw clean test
+./mvnw clean test install -f reservation-service ; ./mvnw clean test -f reservation-client
 ```
 
 ## Docs
