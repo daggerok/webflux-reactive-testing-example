@@ -3,10 +3,17 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.4.RELEASE</version>
+    <relativePath/>
+  </parent>
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.daggerok</groupId>
   <artifactId>webflux-reactive-testing-example</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <properties>
@@ -14,16 +21,31 @@
     <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
-    <java.version>12</java.version>
+    <java.version>11</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+    <spring-cloud-contract-maven-plugin.version>2.1.1.RELEASE</spring-cloud-contract-maven-plugin.version>
   </properties>
 
   <modules>
-    <module>parent</module>
+    <module>common-parent</module>
     <module>reservation-service</module>
     <module>reservation-client</module>
   </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <defaultGoal>package</defaultGoal>
