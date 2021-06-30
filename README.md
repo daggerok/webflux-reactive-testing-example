@@ -3,6 +3,7 @@
 ## Dev
 
 ```bash
+rm -rf ~/.m2/repository/com/github/daggerok
 ./mvnw clean test install -f reservation-service ; ./mvnw clean test -f reservation-client
 ```
 
