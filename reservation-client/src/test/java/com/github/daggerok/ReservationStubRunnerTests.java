@@ -1,17 +1,16 @@
 package com.github.daggerok;
 
 import com.github.daggerok.rest.ReactiveReservationClient;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner;
 import org.springframework.context.annotation.Import;
-import org.springframework.test.context.junit4.SpringRunner;
 import reactor.test.StepVerifier;
 
 import static org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties.StubsMode.LOCAL;
 
-@RunWith(SpringRunner.class)
+@SpringBootTest
 @Import({ ReactiveReservationClient.class, ReservationClientApplication.class })
 @AutoConfigureStubRunner(ids = "com.github.daggerok:reservation-service:1.0.1-SNAPSHOT:8080", stubsMode = LOCAL)
 public class ReservationStubRunnerTests {

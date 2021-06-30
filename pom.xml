@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <parent>
@@ -25,8 +25,9 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
 
+    <junit-jupiter.version>5.7.2</junit-jupiter.version>
     <spring-cloud.version>2020.0.3</spring-cloud.version>
-    <spring-cloud-contract-maven-plugin.version>2.2.7.RELEASE</spring-cloud-contract-maven-plugin.version>
+    <spring-cloud-contract-maven-plugin.version>3.0.3</spring-cloud-contract-maven-plugin.version>
   </properties>
 
   <modules>
@@ -47,7 +48,7 @@
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
-        <version>5.7.2</version>
+        <version>${junit-jupiter.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

@@ -4,14 +4,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.daggerok.dpmain.Reservation;
 import com.github.daggerok.rest.ReactiveReservationClient;
 import com.github.tomakehurst.wiremock.client.WireMock;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.context.annotation.Import;
-import org.springframework.test.context.junit4.SpringRunner;
 import reactor.test.StepVerifier;
 
 import java.util.List;
@@ -19,8 +18,8 @@ import java.util.List;
 import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
 import static org.springframework.http.MediaType.APPLICATION_PROBLEM_JSON_VALUE;
 
+@SpringBootTest
 @AutoConfigureJsonTesters
-@RunWith(SpringRunner.class)
 @AutoConfigureWireMock(port = 8080)
 @Import({ ReactiveReservationClient.class, ReservationClientApplication.class })
 public class ReservationWireMockTests {
@@ -31,7 +30,7 @@ public class ReservationWireMockTests {
   @Autowired
   private ReactiveReservationClient client;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     final String json = objectMapper.writeValueAsString(List.of(Reservation.allOf("1", "Max")));
 
