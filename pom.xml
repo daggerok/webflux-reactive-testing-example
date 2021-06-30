@@ -2,40 +2,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.5.2</version>
     <relativePath/>
   </parent>
-
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.daggerok</groupId>
   <artifactId>webflux-reactive-testing-example</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-
   <properties>
     <encoding>UTF-8</encoding>
     <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-
     <java.version>11</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-
     <junit-jupiter.version>5.7.2</junit-jupiter.version>
     <spring-cloud.version>2020.0.3</spring-cloud.version>
     <spring-cloud-contract-maven-plugin.version>3.0.3</spring-cloud-contract-maven-plugin.version>
   </properties>
-
   <modules>
     <module>common-parent</module>
     <module>reservation-service</module>
     <module>reservation-client</module>
   </modules>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -54,10 +47,8 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <build>
     <defaultGoal>package</defaultGoal>
-    
     <pluginManagement>
       <plugins>
         <plugin>
@@ -71,5 +62,4 @@
       </plugins>
     </pluginManagement>
   </build>
-
 </project>
