@@ -2,24 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
   <parent>
     <groupId>com.github.daggerok</groupId>
     <artifactId>common-parent</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <relativePath>../common-parent/pom.xml</relativePath>
   </parent>
-
   <modelVersion>4.0.0</modelVersion>
   <artifactId>reservation-service</artifactId>
   <packaging>jar</packaging>
-
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
     </dependency>
-
     <dependency>
       <groupId>de.flapdoodle.embed</groupId>
       <artifactId>de.flapdoodle.embed.mongo</artifactId>
@@ -31,18 +27,15 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <profiles>
     <profile>
       <id>mongoEmbedded</id><!-- ./mvnw -PmongoEmbedded ... -->
-
       <activation>
         <property><!-- ./mvnw -Dmongo=embedded... -->
           <name>mongo</name>
           <value>embedded</value>
         </property>
       </activation>
-
       <dependencies>
         <dependency>
           <groupId>de.flapdoodle.embed</groupId>
@@ -51,10 +44,8 @@
       </dependencies>
     </profile>
   </profiles>
-
   <build>
     <defaultGoal>clean install</defaultGoal>
-
     <plugins>
       <plugin>
         <groupId>org.springframework.cloud</groupId>
@@ -68,5 +59,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>
